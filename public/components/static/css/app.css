@@ -1,0 +1,33 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: auto;
+  height: 38rem;
+}
+
+.main img {
+  width: 30rem;
+}
+
+.main .tag {
+  width: 30rem;
+  display: flex;
+  line-height: 3rem;
+  flex-wrap: wrap;
+}
+
+.main .tag a {
+  flex: 1;
+  width: 25%;
+  min-width: 25%;
+  max-width: 25%;
+  display: block;
+  font-size: 1.5rem;
+  color: #c31f2d;
+  font-weight: 700;
+  text-align: center;
+}
