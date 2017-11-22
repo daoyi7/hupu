@@ -3,7 +3,7 @@ const superagent = require('superagent')
 const cheerio = require('cheerio')
 const eventproxy = require('eventproxy');
 const url = require('url')
-const hc = 'https://bbs.hupu.com/all-nba'
+const hc = 'https://voice.hupu.com/nba'
 
 const app = express()
 
@@ -17,12 +17,14 @@ app.get('/', (req, res, next) => {
       const $ = cheerio.load(sres.text)
       let api = []
 
-      $(".bbsPaList li").each((idx, ele) => {
+      $(".news-list li").each((idx, ele) => {
         const $ele = $(ele)
 
         api.push({
-          name: $ele.find("a").text().trim(),
-          href: $ele.find("a").attr('href'),
+          title: $ele.find("h4 a").text().trim(),
+          href: $ele.find("h4 a").attr("href"),
+          upTime: $ele.find(".other-left a").eq(0).text().trim(),
+          via: $ele.find(".comeFrom a").text().trim(),
         })
       })
 

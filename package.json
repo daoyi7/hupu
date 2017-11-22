@@ -58,7 +58,7 @@
     "build": "concurrently \"yarn react-build\" \"cd server && node build\"",
     "test": "node scripts/test.js --env=jsdom"
   },
-  "proxy": "http://127.0.0.1:7777/",
+  "proxy": "http://127.0.0.1:7777/api",
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"

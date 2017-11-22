@@ -9,7 +9,7 @@ import More from './More/More'
 export default class App extends Component {
 
   componentDidMount() {
-    fetch('/bxj')
+    fetch('/voice')
       .then(res => res.json())
       .then((json) => {
         console.log(json)
