@@ -1,17 +1,21 @@
 {
-  "name": "hupu",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "name": "main",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "eventproxy": "^1.0.0",
-    "express": "^4.16.2",
-    "superagent": "^3.8.1"
-  }
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.12.1",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "react-start": "react-scripts start",
+    "start": "concurrently \"yarn react-start\" \"cd server && node app\"",
+    "react-build": "react-scripts build",
+    "build": "concurrently \"yarn react-build\" \"cd server && node build\"",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://127.0.0.1:7777/"
 }
