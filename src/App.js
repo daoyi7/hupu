@@ -4,14 +4,6 @@ import './App.css';
 
 class App extends Component {
 
-  componentDidMount() {
-    fetch('/bxj')
-      .then(res => res.json())
-      .then((json) => {
-        console.log(json)
-      })
-  }
-
   render() {
     return (
       <div className="App">
