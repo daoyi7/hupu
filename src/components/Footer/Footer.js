@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {NavLink} from 'react-router-dom'
-import './static/footer.less'
+import './footer.less'
 
 export default class Footer extends Component {
   render() {

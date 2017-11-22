@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Header from '../Header/Header'
 import List from '../List/List'
 import Footer from '../Footer/Footer'
+import './home.less'
 
 export default class Home extends Component {
 
@@ -23,9 +24,9 @@ export default class Home extends Component {
   render() {
     const home_data = this.state.home_data
     return (
-      <div>
+      <div className="home">
         <Header />
-        {home_data.map((data,idx) => <List key={idx} index={idx} list_data={data} />)}
+        {home_data.map((data,idx) => <List key={idx} list_data={data} />)}
         <Footer />
       </div>
     )

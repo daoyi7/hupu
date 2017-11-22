@@ -8,10 +8,13 @@ export default class List extends Component {
 
     return (
       <div className="list">
-        <div className="wrap">
-          <Link to={`/t/${list.index}`}></Link>
+        <Link to={`/t/${list.id}`} className="wrap">
           <h2 className="title">{list.title}</h2>
-        </div>
+          <p>
+            <span className="up_time">{list.upTime}</span>
+            <span className="source">{list.via}</span>
+          </p>
+        </Link>
       </div>
     )
   }

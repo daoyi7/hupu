@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import './static/header.less'
-import logo from './static/logo.png'
+import './header.less'
+import logo from './logo.png'
 
 export default class Header extends Component {
   render() {
