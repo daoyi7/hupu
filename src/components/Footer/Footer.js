@@ -1,40 +1,40 @@
 import React, {Component} from 'react'
-import Home from '../Home/Home'
-import './footer.less'
+import {NavLink} from 'react-router-dom'
+import './static/footer.less'
 
-export default class Header extends Component {
+export default class Footer extends Component {
   render() {
     return (
       <div className="footer">
         <div className="btn">
-          <a href="/home">
+          <NavLink to="/home">
             <i className="icon iconfont icon-home"></i>
             <p>新闻</p>
-          </a>
+          </NavLink>
         </div>
         <div className="btn">
-          <a href="/home">
+          <NavLink to="/game">
             <i className="icon iconfont icon-game"></i>
             <p>比赛</p>
-          </a>
+          </NavLink>
         </div>
         <div className="btn">
-          <a href="/bbs">
+          <NavLink to="/bbs">
             <i className="icon iconfont icon-bbs"></i>
             <p>社区</p>
-          </a>
+          </NavLink>
         </div>
         <div className="btn">
-          <a href="/rank">
+          <NavLink to="/rank">
             <i className="icon iconfont icon-rank"></i>
             <p>排名</p>
-          </a>
+          </NavLink>
         </div>
         <div className="btn">
-          <a href="/more">
+          <NavLink to="/more">
             <i className="icon iconfont icon-more"></i>
             <p>更多</p>
-          </a>
+          </NavLink>
         </div>
       </div>
     )

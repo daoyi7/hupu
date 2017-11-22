@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
-import Header from './Header/Header'
 import Home from './Home/Home'
-import Footer from './Footer/Footer'
+import Game from './Game/Game'
+import BBS from './BBS/BBS'
+import Rank from './Rank/Rank'
+import More from './More/More'
 
 export default class App extends Component {
 
@@ -17,14 +19,16 @@ export default class App extends Component {
   render() {
     return (
       <div className="hupu">
-        <Header />
         <BrowserRouter>
           <Switch>
-            <Route path = '/home' component = { Home }></Route>
+            <Route exact path = '/home' component = { Home }></Route>
+            <Route exact path = '/game' component = { Game }></Route>
+            <Route exact path = '/bbs' component = { BBS }></Route>
+            <Route exact path = '/rank' component = { Rank }></Route>
+            <Route exact path = '/more' component = { More }></Route>
             <Redirect from = "/" to = '/home' />
           </Switch>
         </BrowserRouter>
-        <Footer />
       </div>
     )
   }
