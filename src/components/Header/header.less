@@ -1,5 +1,21 @@
-@base: red;
+@hcColor: #c51a2d;
+@h: 4rem;
 
-h2 {
-  color: @base;
+div.header {
+  width: 100vw;
+  height: @h;
+  overflow: hidden;
+  background: @hcColor;
+}
+
+div.header h2 {
+  width: 100%;
+  height: @h;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.header h2 img {
+  width: 30vw;
 }
