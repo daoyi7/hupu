@@ -22,6 +22,10 @@ app.use('/api/team', require('./router/group'))
 
 app.use('/api/voice', require('./router/voice'))
 
+/**********************************分区排名 API*********************************/
+
+app.use('/api/rank', require('./router/rank'))
+
 /**********************************贴子详情 API*********************************/
 
 app.use('/api/t', require('./router/detail'))

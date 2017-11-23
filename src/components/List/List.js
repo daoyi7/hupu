@@ -15,10 +15,12 @@ export default class List extends Component {
 
   render() {
     const list = this.props.list_data
+    // console.log(list[0].urls.bbs_url.split("").slice(21,29).join(""))
+    const bbs_id = list.urls.bbs_url === undefined ? '' : list.urls.bbs_url.split("").slice(21,29).join("")
 
     return (
       <div className="list">
-        <Link to={`/t/${list.id}`} className="wrap">
+        <Link to={`/t/${bbs_id}`} className="wrap">
           <div className="item">
             <div className="thumb">
               <img src={list.thumb} alt="" />

@@ -80,7 +80,7 @@ app.get('/', (req, res, next) => {
       const $ = cheerio.load(sres.text)
       let urls = []
 
-      $(".news-list li").slice(0, 10).each((idx, ele) => {
+      $(".news-list li").each((idx, ele) => {
         const $ele = $(ele)
 
         if (typeof($ele.attr("class")) == "undefined") {
@@ -91,7 +91,6 @@ app.get('/', (req, res, next) => {
             id: idx,
             voice_url: voice_href,
             bbs_url: bbs_href,
-            bbs_url_id: bbs_href.split("").slice(21, 29).join("")
           })
         }
       })
@@ -133,8 +132,7 @@ app.get('/', (req, res, next) => {
       async.mapLimit(urls, 5, (url, callback, index) => {
         fetchUrl(url.voice_url, callback, url.id)
       }, (err, result) => {
-        console.log('final:')
-        console.log(result)
+        console.log('voice.api is ok')
         res.send(result)
       })
     })
