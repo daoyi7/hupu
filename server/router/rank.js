@@ -78,7 +78,7 @@ app.get('/',(req, res, next) => {
         }, delay)
       }
 
-      async.mapLimit(urls, 5, (url_item, callback, index) => {
+      async.mapLimit(urls, 2000, (url_item, callback, index) => {
         fetchUrl(url_item.team_href, callback, url_item.id)
       }, (err, result) => {
         res.send(result)

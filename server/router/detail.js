@@ -32,12 +32,6 @@ app.get('/', (req, res, next) => {
           reply_time: $(ele).find(".left span").eq(0).text().trim(),
           content: $(ele).find("td").text().trim(),
           likes_count: $(ele).find(".stime").eq(1).text().trim(),
-          // title: post_title,
-          // author: post_author,
-          // create_time: post_time,
-          // reply: post_reply,
-          // view: post_view,
-          // latest_reply: latest_reply,
         })
       })
 
