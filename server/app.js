@@ -12,16 +12,16 @@ app.use(express.static(path.join(__dirname, '/public/components/')))
 
 /**********************************分区类型 API********************************/
 
-app.use('/api/all', require('./router/all/all'))
+app.use('/api/all', require('./router/all'))
 
 /************************************板块 API**********************************/
 
-app.use('/api/team', require('./router/group/group'))
+app.use('/api/team', require('./router/group'))
 
 /**********************************滚动新闻 API*********************************/
 
-app.use('/api/voice', require('./router/voice/voice'))
+app.use('/api/voice', require('./router/voice'))
 
 /**********************************贴子详情 API*********************************/
 
-app.use('/api/t', require('./router/detail/detail'))
+app.use('/api/t', require('./router/detail'))
