@@ -40,11 +40,14 @@ export default class Rank extends Component {
                 rank_data.slice(0, 15).map(
                   (rank,idx) =>
                   <tr key={idx}>
-                    <td className="teamname">{rank.team}</td>
-                    <td className="win_lose">{rank.win} - {rank.lose}</td>
-                    <td className="win_rate">{rank.win_rate}%</td>
-                    <td className="field_difference">{rank.field_difference}</td>
-                    <td className="coach">{rank.coach}</td>
+                    <td className="teamname">
+                      <img src={rank.team_img} alt="" />
+                      {rank.team_rank.team}
+                    </td>
+                    <td className="win_lose">{rank.team_rank.win} - {rank.team_rank.lose}</td>
+                    <td className="win_rate">{rank.team_rank.win_rate}%</td>
+                    <td className="field_difference">{rank.team_rank.field_difference}</td>
+                    <td className="coach">{rank.team_rank.coach}</td>
                   </tr>
                 )
               }
@@ -59,11 +62,14 @@ export default class Rank extends Component {
                 rank_data.slice(15).map(
                   (rank,idx) =>
                   <tr key={idx}>
-                    <td className="teamname">{rank.team}</td>
-                    <td className="win_lose">{rank.win} - {rank.lose}</td>
-                    <td className="win_rate">{rank.win_rate}</td>
-                    <td className="field_difference">{rank.field_difference}</td>
-                    <td className="coach">{rank.coach}</td>
+                    <td className="teamname">
+                      <img src={rank.team_img} alt="" />
+                      {rank.team_rank.team}
+                    </td>
+                    <td className="win_lose">{rank.team_rank.win} - {rank.team_rank.lose}</td>
+                    <td className="win_rate">{rank.team_rank.win_rate}</td>
+                    <td className="field_difference">{rank.team_rank.field_difference}</td>
+                    <td className="coach">{rank.team_rank.coach}</td>
                   </tr>
                 )
               }

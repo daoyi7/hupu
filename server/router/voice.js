@@ -64,7 +64,6 @@ const async = require('async')
 const express = require('express')
 const superagent = require('superagent')
 const cheerio = require('cheerio')
-const eventproxy = require('eventproxy');
 const url = require('url')
 const hc = 'https://voice.hupu.com/nba'
 
@@ -132,7 +131,6 @@ app.get('/', (req, res, next) => {
       async.mapLimit(urls, 5, (url, callback, index) => {
         fetchUrl(url.voice_url, callback, url.id)
       }, (err, result) => {
-        console.log('voice.api is ok')
         res.send(result)
       })
     })

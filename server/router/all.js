@@ -2,7 +2,6 @@ const express = require('express')
 const superagent = require('superagent')
 const cheerio = require('cheerio')
 const eventproxy = require('eventproxy');
-const url = require('url')
 const hc = 'https://bbs.hupu.com/all-nba'
 
 const app = express()
