@@ -8,7 +8,9 @@ export default class List extends Component {
   info() {
     let info = this.props.list_data.info.split("")
 
-    return info.slice(0, 55).join("")
+    info.splice(23, 0, '...')
+
+    return info.slice(0, 24).join("")
   }
 
   render() {
@@ -23,6 +25,7 @@ export default class List extends Component {
             </div>
             <div className="content">
               <h2 className="title">{list.title}</h2>
+              <p className="info">{this.info()}</p>
               <p className="time_source">
                 <span className="up_time">{list.upTime}</span>
               </p>
